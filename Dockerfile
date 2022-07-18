@@ -16,4 +16,4 @@ WORKDIR /opt/keycloak
 RUN bin/kc.sh import --file data/import/realm-export.json --override=true
 
 # adding "--import-realm" here works
-ENTRYPOINT ["bin/kc.sh", "start", "--proxy=edge", "--http-enabled=true", "--hostname-strict-https=false"]
+ENTRYPOINT ["bin/kc.sh", "start-dev"]
