@@ -13,7 +13,7 @@ COPY --from=kc-builder /opt/keycloak/ /opt/keycloak/
 WORKDIR /opt/keycloak
 
 # this fails
-RUN bin/kc.sh import --file data/import/realm-export.json --override=true
+#RUN bin/kc.sh import --file data/import/realm-export.json --override=true
 
 # adding "--import-realm" here works
-ENTRYPOINT ["bin/kc.sh", "start-dev"]
+CMD ["start-dev"]
